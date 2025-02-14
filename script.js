@@ -11,9 +11,10 @@ const getSum = () => {
     const table = document.querySelector("table");
     const totalRow = document.createElement("tr");
     const totalCell = document.createElement("td");
-	totalCell.id = "ans";
     totalCell.textContent = `Total Price: Rs ${totalPrice}`;
-    totalRow.append(totalCell,totalRow)
+	totalCell.id = "ans";
+    totalRow.appendChild(totalCell);
+    table.appendChild(totalRow);
 };
 
 getSumBtn.addEventListener("click", getSum);
